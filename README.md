@@ -22,12 +22,12 @@ Or install it yourself as:
 
 ``` ruby
 job_id = JobWorker.perform_async(*args)
-
 ```
-    OR
+
+OR
+
 ``` ruby
 job_id = Model.delay.do_some_stuff(*args)
-
 ```
   * Poll job status (`:queued`, `:working`, `:complete`, and `:failed`)
 
