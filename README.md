@@ -1,6 +1,6 @@
 # Workiq
 
-Workiq adds [Sidekiq](http://github.com/mperham/sidekiq) middlewares to track a job worker status. Available status values are `:queued`, `:working`, `:complete`, and `:failed`
+Workiq adds a [Sidekiq](http://github.com/mperham/sidekiq) middleware to track a job worker status. Available status values are `:queued`, `:working`, `:complete`, and `:failed`
 
 ## Installation
 
