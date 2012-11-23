@@ -1,4 +1,4 @@
-Copyright (c) 2012 Moustafa Badawy
+Copyright (c) 2012 Moustafa Badawy <moustafa@rubikal.com>
 
 MIT License
 
