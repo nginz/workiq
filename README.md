@@ -19,14 +19,18 @@ Or install it yourself as:
 ## Usage
   * Define your Sidekiq workers as normal. Check the [Sidekiq home page](http://mperham.github.com/sidekiq/) for details.
   * Call the worker perform method
+
 ``` ruby
 job_id = JobWorker.perform_async(*args)
+
 ```
     OR
 ``` ruby
 job_id = Model.delay.do_some_stuff(*args)
+
 ```
   * Poll job status (`:queued`, `:working`, `:complete`, and `:failed`)
+
 ``` ruby
 status = Workiq.status(job_id)
 ```
