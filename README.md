@@ -1,6 +1,6 @@
 # Workiq
 
-TODO: Write a gem description
+Workiq adds [Sidekiq](http://github.com/mperham/sidekiq) middlewares to track a job worker status. Available status values are :queued, :working, :complete, and :failed
 
 ## Installation
 
@@ -17,8 +17,19 @@ Or install it yourself as:
     $ gem install workiq
 
 ## Usage
-
-TODO: Write usage instructions here
+  * Define your Sidekiq workers as normal. Check the [Sidekiq home page](http://mperham.github.com/sidekiq/) for details.
+  * Call the worker perform method
+    ``` ruby
+    job_id = JobWorker.perform_async(*args)
+    ```
+    OR
+    ``` ruby
+    job_id = Model.delay.do_some_stuff(*args)
+    ```
+  * Poll job status (`:queued`, `:working`, `:complete`, and `:failed`)
+    ``` ruby
+    status = Workiq.status(job_id)
+    ```
 
 ## Contributing
 
