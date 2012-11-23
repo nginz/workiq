@@ -5,7 +5,7 @@ require "workiq/middleware/server"
 require "workiq/middleware/chain"
 
 module Workiq
-	def self.status(jid)
+  def self.status(jid)
     Workiq::Storage.read_field(jid, :status).to_sym
   end
 end
