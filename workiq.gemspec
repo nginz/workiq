@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Workiq::VERSION
   gem.authors       = ["Moustafa Badawy"]
   gem.email         = ["moustafa@rubikal.com"]
-  gem.description   = %q{}
-  gem.summary       = %q{A RubyGem for getting Sidekiq job worker status}
+  gem.description   = %q{Workiq adds Sidekiq middlewares to track a job worker status. Status values are :queued, :working, :complete, and :failed}
+  gem.summary       = %q{Track Sidekiq job worker status}
   gem.homepage      = ""
 
   gem.add_dependency 'sidekiq', '~>2.5.0'
