@@ -6,6 +6,6 @@ require "workiq/middleware/chain"
 
 module Workiq
   def self.status(jid)
-    Workiq::Storage.read_field(jid, :status).to_sym
+    Workiq::Storage.read_field(jid, :status).try :to_sym
   end
 end
